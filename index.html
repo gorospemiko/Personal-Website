@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miko Gorospe</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
+      * {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins";
+        background: #d1dedd;
+      }
+      .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      }
+      header {
+        position: sticky;
+        top: 0;
+        grid-column: span 5;
+        border-bottom: 1px solid #000;
+        display: flex;
+        justify-content: center;
+      }
+      header > nav {
+        max-width: 1200px;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px;
+        width: 100%;
+      }
+
+      header > nav > li > a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      header > nav > li {
+        list-style: none;
+        /* Removes the column  */
+      }
+      main {
+        min-width: 1200px;
+        grid-column: 2 / span 3;
+        border-left: 1px solid #bbc7c7;
+        border-right: 1px solid #bbc7c7;
+      }
+      article.first-side {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #000;
+      }
+      article.first-side > img {
+        margin-top: 30px;
+        background-color: pink;
+        width: 150px;
+        height: 150px;
+      }
+      article.first-side > button {
+        display: inline-block;
+      }
+      article.first-side > div {
+        width: 100%;
+        display: flex;
+        justify-content: space-evenly;
+      }
+      article.first-side > div > li {
+        list-style: none;
+        /* Removes the column  */
+      }
+      article.first-side > div > li > img {
+        background-color: pink;
+        width: 50px;
+        height: 50px;
+      }
+      h3 {
+        text-align: center;
+      }
+
+      article img {
+        width: 100%;
+        border: 4px solid #fff;
+        border-radius: 8px;
+      }
+      article p {
+        margin: 20px 10px;
+        text-align: justify;
+      }
+
+      /* Projects */
+      div.container-proj {
+        grid-column: span 3;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #000;
+      }
+      /* Experience */
+      article.experience > p {
+        padding-bottom: 30px;
+      }
+      footer {
+        grid-column: span 5;
+        border-top: 1px solid #000;
+        height: auto;
+      }
+      footer > div.footer {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        display: grid;
+        background-color: lightgray; /* To visualize grid */
+      }
+      div.footer > article {
+        grid-column: 2 / span 3;
+        min-width: 1200px;
+      }
+      @media (max-width: 1210px) {
+        main {
+          min-width: unset;
+          grid-column: span 5;
+        }
+        div.footer > article {
+          min-width: unset;
+          grid-column: span 5;
+        }
+      }
+      @media (max-width: 768px) {
+        main {
+        }
+        div.container-proj {
+          grid-template-columns: 1fr;
+        }
+      }
+      @media (max-width: 576px) {
+      }
+    </style>
+  </head>
+  <div class="grid-container">
+    <header>
+      <nav>
+        <li><a href="#home-header">Home</a></li>
+        <li><a href="#skill-header">Skills</a></li>
+        <li><a href="#project-header">Projects</a></li>
+        <li><a href="#experience-header">Experience</a></li>
+      </nav>
+    </header>
+    <main>
+      <article class="first-side">
+        <img src="/" alt="" id="home-header" />
+        <h2>I do code everyday to improve my skills.</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi
+          possimus culpa pariatur aspernatur incidunt. Nemo velit ducimus vero,
+          iure impedit corrupti nostrum eligendi facere, mollitia ea numquam a,
+          voluptatum ipsum.
+        </p>
+        <section class="button-display">
+          <button>Get in Touch</button>
+          <button>Download CV</button>
+          <h2 id="skill-header">Experience with</h2>
+        </section>
+        <div>
+          <li><img src="/" alt="" /></li>
+          <li><img src="/" alt="" /></li>
+          <li><img src="/" alt="" /></li>
+          <li><img src="/" alt="" /></li>
+          <li><img src="/" alt="" /></li>
+        </div>
+      </article>
+      <h3 id="project-header">Projects</h3>
+      <div class="container-proj">
+        <article class="project">
+          <img src="" alt="article img" />
+          <div>
+            <h3>Balloon Magic</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+              nisi minus placeat hic animi eveniet consectetur voluptates
+              aliquid, sunt accusamus!
+            </p>
+          </div>
+        </article>
+        <article class="project">
+          <img src="" alt="article img" />
+          <div>
+            <h3>Road to Freedom</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
+              nisi minus placeat hic animi eveniet consectetur voluptates
+              aliquid, sunt accusamus!
+            </p>
+          </div>
+        </article>
+      </div>
+      <article class="experience">
+        <h3 id="experience-header">Experience</h3>
+        <div><img src="" alt="hello" />Job<span>Date</span></div>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non nam
+          voluptas rerum velit adipisci vero quia quaerat eveniet laborum, iusto
+          culpa debitis, incidunt facere ut ea nobis? Odit, ut aut?
+        </p>
+      </article>
+    </main>
+    <footer>
+      <div class="footer">
+        <article>
+          <h3>Contacts</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur
+            eos, veniam similique quam ex eum. Aliquam assumenda doloribus vero
+            debitis ratione eaque alias quidem quisquam, aut deserunt dolor unde
+            optio.
+          </p>
+        </article>
+      </div>
+    </footer>
+  </div>
+  <body></body>
+</html>
