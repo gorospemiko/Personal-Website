@@ -94,10 +94,39 @@
         list-style: none;
         /* Removes the column  */
       }
+      /* Images */
       article.first-side > div > li > img {
-        width: 50px;
-        height: 50px;
+        width: 60px;
+        height: 60px;
       }
+      article.experience > div > img {
+        width: 40px;
+        height: 40px;
+        border: 1px solid white;
+        border-radius: 50%;
+      }
+
+      /*insert*/
+      .experience div {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 12px;
+      }
+      .experience div span {
+        color: #666;
+        font-size: 0.9rem;
+        margin-left: auto; /* Pushes the date to the right */
+      }
+
+      .experience p {
+        color: #999;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 0;
+        max-width: 85%; /* Makes the description not span full width */
+      }
+      /**/
       h3 {
         text-align: center;
       }
@@ -122,17 +151,37 @@
       }
       footer {
         grid-column: span 5;
-        border-top: 1px solid red;
         height: auto;
       }
       footer > div.footer {
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         display: grid;
-        background-color: lightgray; /* To visualize grid */
+        padding-bottom: 50px;
+        background-color: #1e1e1d;
       }
       div.footer > article {
         grid-column: 2 / span 3;
         min-width: 1200px;
+      }
+      .footer h3 {
+        text-align: left;
+        margin: 20px 10px;
+        margin-top: 30px;
+      }
+      .footer p {
+        color: #999;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 0;
+        max-width: 85%;
+      }
+      .footer span {
+        margin: 20px 10px;
+        color: #999;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        margin: 0;
+        max-width: 85%;
       }
       /*Button*/
       .getin-touch {
@@ -225,7 +274,7 @@
 
       .project div {
         padding: 12px 15px; /* Reduced padding, especially on top/bottom */
-        background: #1a1a1a;
+        background: #272626;
         display: flex;
         flex-direction: column;
         gap: 4px; /* Reduced gap between elements */
@@ -263,6 +312,21 @@
           min-width: unset;
           grid-column: span 5;
         }
+        /*experience part */
+        article.experience > div > img {
+          margin-left: 20px;
+        }
+        .experience p {
+          margin-left: 20px;
+        }
+        .experience div span {
+          margin-right: 20px;
+        }
+        .footer h3,
+        .footer p,
+        .footer span {
+          margin-left: 20px;
+        }
       }
       @media (max-width: 768px) {
         div.container-proj {
@@ -298,11 +362,11 @@
         </section>
         <h2 id="skill-header">Experienced with</h2>
         <div>
-          <li><img src="images/final/c++.png" alt="" /></li>
-          <li><img src="images/final/css.png" alt="" /></li>
-          <li><img src="images/final/html.png" alt="" /></li>
-          <li><img src="images/final/javascript.png" alt="" /></li>
-          <li><img src="images/final/mysql.png" alt="" /></li>
+          <li><img src="images/final/c++.png" alt="C++" /></li>
+          <li><img src="images/final/css.png" alt="CSS" /></li>
+          <li><img src="images/final/html.png" alt="HTML" /></li>
+          <li><img src="images/final/javascript.png" alt="JAVASCRIPT" /></li>
+          <li><img src="images/final/mysql.png" alt="MYSQL" /></li>
         </div>
       </article>
       <h3 id="project-header">Projects</h3>
@@ -317,7 +381,11 @@
       </div>
       <article class="experience">
         <h3 id="experience-header">Experience</h3>
-        <div><img src="" alt="hello" />Job<span>Date</span></div>
+        <div>
+          <img src="images/pfda.png" alt="hello" />Web Developer Intern<span
+            >Feb 2024 - May 2024</span
+          >
+        </div>
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non nam
           voluptas rerum velit adipisci vero quia quaerat eveniet laborum, iusto
@@ -335,6 +403,7 @@
             debitis ratione eaque alias quidem quisquam, aut deserunt dolor unde
             optio.
           </p>
+          <span>gorospemiko20@gmail.com</span>
         </article>
       </div>
     </footer>
