@@ -9,11 +9,13 @@
       * {
         scroll-behavior: smooth;
       }
-      body {
+      body,
+      html {
+        color: white;
         margin: 0;
         padding: 0;
         font-family: "Poppins";
-        background: #d1dedd;
+        background: #161513;
       }
       .grid-container {
         display: grid;
@@ -23,7 +25,7 @@
         position: sticky;
         top: 0;
         grid-column: span 5;
-        border-bottom: 1px solid #000;
+        background-color: #1e1e1d;
         display: flex;
         justify-content: center;
       }
@@ -31,13 +33,14 @@
         max-width: 1200px;
         display: flex;
         justify-content: space-evenly;
-        padding: 10px;
+        padding: 20px;
         width: 100%;
       }
 
       header > nav > li > a {
         color: inherit;
         text-decoration: none;
+        font-size: 20px;
       }
 
       header > nav > li {
@@ -47,8 +50,6 @@
       main {
         min-width: 1200px;
         grid-column: 2 / span 3;
-        border-left: 1px solid #bbc7c7;
-        border-right: 1px solid #bbc7c7;
       }
       article.first-side {
         display: grid;
@@ -56,13 +57,30 @@
         align-items: center;
         justify-items: center;
         padding-bottom: 30px;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid white;
+      }
+      article.first-side > p {
+        width: 50%;
       }
       article.first-side > img {
         margin-top: 30px;
-        background-color: pink;
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
+        border-radius: 8px;
+        border-radius: 50%;
+      }
+      main > article > h2 {
+        font-size: 30px;
+      }
+      main > article > h2 > span {
+        background: linear-gradient(
+          90deg,
+          rgba(255, 134, 95, 1) 0%,
+          rgba(160, 57, 245, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
       }
       article.first-side > button {
         display: inline-block;
@@ -85,11 +103,6 @@
         text-align: center;
       }
 
-      article img {
-        width: 100%;
-        border: 4px solid #fff;
-        border-radius: 8px;
-      }
       article p {
         margin: 20px 10px;
         text-align: justify;
@@ -99,9 +112,10 @@
       div.container-proj {
         grid-column: span 3;
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
         padding-bottom: 30px;
-        border-bottom: 1px solid #000;
+        border-bottom: 1px solid white;
+        place-items: center;
       }
       /* Experience */
       article.experience > p {
@@ -109,7 +123,7 @@
       }
       footer {
         grid-column: span 5;
-        border-top: 1px solid #000;
+        border-top: 1px solid red;
         height: auto;
       }
       footer > div.footer {
@@ -120,6 +134,126 @@
       div.footer > article {
         grid-column: 2 / span 3;
         min-width: 1200px;
+      }
+      /*Button*/
+      .getin-touch {
+        background-color: white;
+        color: black;
+        padding: 12px 24px;
+        border: none;
+        border-radius: 50px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-weight: bold;
+      }
+
+      .getin-touch:hover,
+      .download-CV:hover {
+        transform: scale(1.05);
+        background-color: #333;
+      }
+      .download-CV {
+        background-color: black;
+        color: white;
+        padding: 10px 24px;
+        border: none;
+        border-radius: 50px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        border: 2px solid white;
+      }
+      .button-display {
+        display: flex; /* Add this to make gap work */
+        gap: 20px;
+        align-items: center;
+      }
+      #skill-header {
+        font-size: 16px;
+        font-weight: 500; /* Medium weight */
+        text-transform: uppercase;
+        padding: 8px 16px;
+        letter-spacing: 1px;
+      }
+      #project-header {
+        background: linear-gradient(to bottom, #ff7e5f, #ff5e3a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: #ff5e3a; /* Fallback color */
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+      #experience-header {
+        background: linear-gradient(to bottom, #4cc9f0, #4361ee);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        color: #4361ee; /* Fallback color */
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      /*article frame*/
+      .project {
+        background: #1a1a1a;
+        border-radius: 15px;
+        overflow: hidden;
+        width: 350px;
+        cursor: pointer;
+        transition: transform 0.3s ease;
+      }
+
+      .project:hover {
+        transform: translateY(-5px);
+      }
+
+      .project img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .project div {
+        padding: 12px 15px; /* Reduced padding, especially on top/bottom */
+        background: #1a1a1a;
+        display: flex;
+        flex-direction: column;
+        gap: 4px; /* Reduced gap between elements */
+      }
+
+      .project p {
+        color: white;
+        font-size: 0.6rem;
+        text-transform: uppercase;
+        margin: 0;
+        letter-spacing: 0.5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .project p::after {
+        content: "→";
+        display: inline-block;
+        transform: rotate(-45deg);
+      }
+
+      .project h3 {
+        color: white;
+        text-align: left;
+        font-size: 1.1rem;
+        margin: 0;
       }
       @media (max-width: 1210px) {
         main {
@@ -151,8 +285,8 @@
     </header>
     <main>
       <article class="first-side">
-        <img src="/" alt="" id="home-header" />
-        <h2>I do code everyday to improve my skills.</h2>
+        <img src="/images/profile.jpg" alt="" id="home-header" />
+        <h2>I do code everyday to improve my <span>skills!</span></h2>
         <p>
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi
           possimus culpa pariatur aspernatur incidunt. Nemo velit ducimus vero,
@@ -160,10 +294,10 @@
           voluptatum ipsum.
         </p>
         <section class="button-display">
-          <button>Get in Touch</button>
-          <button>Download CV</button>
-          <h2 id="skill-header">Experience with</h2>
+          <button class="getin-touch">Get in Touch</button>
+          <button class="download-CV">Download CV</button>
         </section>
+        <h2 id="skill-header">Experienced with</h2>
         <div>
           <li><img src="/" alt="" /></li>
           <li><img src="/" alt="" /></li>
@@ -175,25 +309,10 @@
       <h3 id="project-header">Projects</h3>
       <div class="container-proj">
         <article class="project">
-          <img src="" alt="article img" />
+          <img src="images/foodproject.jpg" alt="article img" />
           <div>
-            <h3>Balloon Magic</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
-              nisi minus placeat hic animi eveniet consectetur voluptates
-              aliquid, sunt accusamus!
-            </p>
-          </div>
-        </article>
-        <article class="project">
-          <img src="" alt="article img" />
-          <div>
-            <h3>Road to Freedom</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Delectus
-              nisi minus placeat hic animi eveniet consectetur voluptates
-              aliquid, sunt accusamus!
-            </p>
+            <h3>Scale Up:Food</h3>
+            <p>Click here to visit</p>
           </div>
         </article>
       </div>
